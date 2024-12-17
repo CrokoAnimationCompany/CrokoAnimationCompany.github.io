@@ -5,7 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Croko Animation Company - Animazione di alta qualità per ogni progetto.">
     <title>Croko Animation Company</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .section {
+            padding: 2rem;
+            text-align: center;
+        }
+        #team {
+            display: none;
+            background-color: #f9f9f9;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .team-member {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .team-member img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team-member .links {
+            margin-top: 10px;
+        }
+        .team-member .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,7 +76,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">Chi Siamo</a></li>
+                <li><a href="#about" onclick="toggleTeamSection()">Chi Siamo</a></li>
                 <li><a href="#services">Servizi</a></li>
                 <li><a href="#contact">Contatti</a></li>
             </ul>
@@ -24,6 +86,40 @@
     <section id="about" class="section">
         <h1>Chi Siamo</h1>
         <p>Benvenuti in Croko Animation Company! Offriamo animazioni creative e di alta qualità per ogni tipo di progetto.</p>
+        <button onclick="toggleTeamSection()">Scopri il Nostro Team</button>
+    </section>
+    
+    <section id="team" class="section">
+        <h1>Il Nostro Team</h1>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/mario.jpg" alt="Mario Rossi">
+                <h3>Mario Rossi</h3>
+                <p>Fondatore & Direttore Creativo</p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/mariorossi" target="_blank">LinkedIn</a>
+                    <a href="cv/mario_rossi_cv.pdf" target="_blank">CV</a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/lucia.jpg" alt="Lucia Bianchi">
+                <h3>Lucia Bianchi</h3>
+                <p>Responsabile Animazione</p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/luciabianchi" target="_blank">LinkedIn</a>
+                    <a href="cv/lucia_bianchi_cv.pdf" target="_blank">CV</a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/carlo.jpg" alt="Carlo Verdi">
+                <h3>Carlo Verdi</h3>
+                <p>Responsabile Marketing</p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/carloverdi" target="_blank">LinkedIn</a>
+                    <a href="cv/carlo_verdi_cv.pdf" target="_blank">CV</a>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section id="services" class="section">
@@ -66,7 +162,6 @@
     <footer>
         <p>&copy; 2024 Croko Animation Company - Tutti i diritti riservati</p>
     </footer>
-
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -79,6 +174,15 @@
             
             window.location.href = mailtoLink;
         });
+
+        function toggleTeamSection() {
+            const teamSection = document.getElementById('team');
+            if (teamSection.style.display === 'block') {
+                teamSection.style.display = 'none';
+            } else {
+                teamSection.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
