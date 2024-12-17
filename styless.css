@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Stile generale */
 body {
     font-family: 'Arial', sans-serif;
@@ -12,7 +11,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
 header {
     background-color: #333;
     color: white;
@@ -23,29 +21,24 @@ header {
     align-items: center;
     padding: 10px 5%;
 }
-
 header .logo img {
     width: 40px;
     height: auto;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-
 nav ul li a:hover {
     color: #ffd700;
 }
-
 /* Sezioni */
 .section {
     padding: 40px;
@@ -54,7 +47,6 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
 .section h1 {
     margin-bottom: 20px;
     font-size: 2rem;
@@ -62,13 +54,11 @@ nav ul li a:hover {
     border-bottom: 2px solid #f4f4f4;
     padding-bottom: 10px;
 }
-
 #services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-
 .service {
     background-color: #f9f9f9;
     padding: 20px;
@@ -76,16 +66,13 @@ nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s ease;
 }
-
 .service:hover {
     transform: scale(1.05);
 }
-
 .service h2 {
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
-
 /* Form */
 #contact form {
     max-width: 500px;
@@ -94,12 +81,10 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 8px;
 }
-
 form label {
     margin: 10px 0 5px;
     font-weight: bold;
 }
-
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -107,7 +92,6 @@ form input, form textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
 form button {
     width: 100%;
     padding: 12px;
@@ -118,11 +102,9 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 form button:hover {
     background-color: #555;
 }
-
 /* Footer */
 footer {
     text-align: center;
@@ -130,18 +112,15 @@ footer {
     background-color: #333;
     color: white;
 }
-
-/* Stili per la sezione Team */
+/* Sezione Team */
 #team {
     display: none;
 }
-
 #team-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-
 .team-member {
     background-color: #f9f9f9;
     padding: 20px;
@@ -149,11 +128,9 @@ footer {
     text-align: center;
     transition: transform 0.3s ease;
 }
-
 .team-member:hover {
     transform: scale(1.05);
 }
-
 .team-member img {
     width: 120px;
     height: 120px;
@@ -161,38 +138,32 @@ footer {
     object-fit: cover;
     margin-bottom: 15px;
 }
-
 .team-member .links {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
-
 .team-member .links a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-
 .team-member .links a:hover {
     color: #ffd700;
 }
-
 /* Media Queries */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
     }
-    
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 15px;
         margin-top: 15px;
     }
-    
     #services, #team-grid {
         grid-template-columns: 1fr;
     }
