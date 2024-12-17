@@ -24,7 +24,18 @@
     <section id="about" class="section">
         <h1>Chi Siamo</h1>
         <p>Benvenuti in Croko Animation Company! Offriamo animazioni creative e di alta qualità per ogni tipo di progetto.</p>
-        <button onclick="toggleTeamSection()">
+        <button onclick="toggleTeamSection()" style="
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='#333'">
             Scopri il Nostro Team
         </button>
     </section>
