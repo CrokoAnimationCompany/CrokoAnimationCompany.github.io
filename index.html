@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -69,95 +69,19 @@
             font-size: 4em; /* Titolo grande */
             margin-top: 10px; /* Spazio dall'alto (opzionale) */
         }
-        #services {
+        #team-grid, #service-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
-        .service {
+        .team-member, .service-member {
             background-color: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
             text-align: center;
             transition: transform 0.3s ease;
         }
-        .service:hover {
-            transform: scale(1.05);
-        }
-        .service h2 {
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-        /* Form */
-        #contact form {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-        }
-        form label {
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form button {
-            width: 100%;
-            padding: 12px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        form button:hover {
-            background-color: #555;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-                margin-top: 15px;
-            }
-            #services {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* Stili per la sezione Team */
-        #team {
-            display: none;
-        }
-        #team-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .team-member {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .team-member:hover {
+        .team-member:hover, .service-member:hover {
             transform: scale(1.05);
         }
         .team-member img {
@@ -167,25 +91,41 @@
             object-fit: cover;
             margin-bottom: 15px;
         }
-        .team-member .links {
+        .team-member .links, .service-member .links {
             margin-top: 10px;
             display: flex;
             justify-content: center;
             gap: 15px;
         }
-        .team-member .links a {
+        .team-member .links a, .service-member .links a {
             color: #333;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
-        .team-member .links a:hover {
+        .team-member .links a:hover, .service-member .links a:hover {
             color: #ffd700;
         }
         @media (max-width: 768px) {
-            #team-grid {
+            #team-grid, #service-grid {
                 grid-template-columns: 1fr;
             }
+        }
+        /* Pulsante Scopri */
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -206,20 +146,7 @@
     <section id="about" class="section">
         <h4>Chi Siamo</h4>
         <p>Benvenuti in Croko Animation Company! Questo è il team della vostra compagnia crocodillosa preferita!</p>
-        <button onclick="toggleTeamSection()" style="
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        " onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='#333'">
-            Scopri il Nostro Team
-        </button>
+        <button onclick="toggleTeamSection()"> Scopri il Nostro Team </button>
     </section>
     
     <section id="team" class="section">
@@ -266,22 +193,30 @@
     
     <section id="services" class="section">
         <h4>I Nostri Servizi</h4>
-        <div id="team-grid">
-            <div class="service">
-                <h2>🎉 Compleanni</h2>
-                <p>Rendi il tuo giorno speciale magico con temi personalizzati e attività indimenticabili.</p>
+        <div id="service-grid">
+            <div class="service-member"> 
+                <div class="service">
+                    <h2>🎉 Compleanni</h2>
+                    <p>Rendi il tuo giorno speciale magico con temi personalizzati e attività indimenticabili.</p>
+                </div>
             </div>
-            <div class="service">
-                <h2>🎓 Feste di Laurea</h2>
-                <p>Onora i tuoi successi con una celebrazione che non dimenticherai mai.</p>
+            <div class="service-member"> 
+                <div class="service">
+                    <h2>🎓 Feste di Laurea</h2>
+                    <p>Onora i tuoi successi con una celebrazione che non dimenticherai mai.</p>
+                </div>
             </div>
-            <div class="service">
-                <h2>🎄 Eventi Festivi</h2>
-                <p>Da Natale al Capodanno, portiamo la gioia delle feste in ogni occasione.</p>
+            <div class="service-member"> 
+                <div class="service">
+                    <h2>🎄 Eventi Festivi</h2>
+                    <p>Da Natale al Capodanno, portiamo la gioia delle feste in ogni occasione.</p>
+                </div>
             </div>
-            <div class="service">
-                <h2>🎭 Spettacoli Tematici</h2>
-                <p>Porta l'immaginazione alla vita con spettacoli e decorazioni spettacolari.</p>
+            <div class="service-member"> 
+                <div class="service">
+                    <h2>🎭 Spettacoli Tematici</h2>
+                    <p>Porta l'immaginazione alla vita con spettacoli e decorazioni spettacolari.</p>
+                </div>
             </div>
         </div>
     </section>
