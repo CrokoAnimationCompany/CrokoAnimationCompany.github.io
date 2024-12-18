@@ -31,7 +31,7 @@
             padding: 10px 5%;
         }
         header .logo img {
-            width: 40px;
+            width: 60px;
             height: auto;
         }
         nav ul {
@@ -56,12 +56,18 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .section h1 {
+        .section h4 {
             margin-bottom: 20px;
             font-size: 2rem;
             color: #333;
             border-bottom: 2px solid #f4f4f4;
             padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center; /* Centra il titolo */
+            font-style: italic; /* Corsivo */
+            font-size: 4em; /* Titolo grande */
+            margin-top: 10px; /* Spazio dall'alto (opzionale) */
         }
         #services {
             display: grid;
@@ -196,9 +202,9 @@
             </ul>
         </nav>
     </header>
-    
+    <h1>Croko Animation Company</h1>
     <section id="about" class="section">
-        <h1>Chi Siamo</h1>
+        <h4>Chi Siamo</h4>
         <p>Benvenuti in Croko Animation Company! Questo è il team della vostra compagnia crocodillosa preferita!</p>
         <button onclick="toggleTeamSection()" style="
             display: block;
@@ -217,7 +223,7 @@
     </section>
     
     <section id="team" class="section">
-        <h1>Il Nostro Team</h1>
+        <h4>Il Nostro Team</h4>
         <div id="team-grid">
             <div class="team-member">
                 <img src="images/giovanni_cinel.jpg" alt="Giovanni Cinel">
@@ -259,7 +265,7 @@
     </section>
     
     <section id="services" class="section">
-        <h1>I Nostri Servizi</h1>
+        <h4>I Nostri Servizi</h4>
         <div class="service">
             <h2>🎉 Compleanni</h2>
             <p>Rendi il tuo giorno speciale magico con temi personalizzati e attività indimenticabili.</p>
@@ -279,7 +285,7 @@
     </section>
     
     <section id="contact" class="section">
-        <h1>Contatti</h1>
+        <h4>Contatti</h4>
         <p>Compila il modulo sottostante per contattarci direttamente. Risponderemo il prima possibile!</p>
         <form id="contactForm">
             <label for="name">Nome:</label>
