@@ -1,146 +1,193 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/crocodile.webp">
-    <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Croko Animation Company - Animazione di alta qualità per ogni progetto.">
     <title>Croko Animation Company</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/Logo.png" alt="Logo Croko Animation Company">
+    <!-- HEADER -->
+    <header class="bg-light py-3 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="images/Logo.png" alt="Logo Croko Animation Company" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#about" class="nav-link">Croko TEAM</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Servizi</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contattaci</a></li>
+                    <li class="nav-item"><a href="pdf/albo_oro.pdf" target="_blank" class="nav-link disabled">Albo d'Oro</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about" onclick="toggleTeamSection()">Croko TEAM</a></li>
-                <li><a href="#services">Servizi</a></li>
-                <li><a href="#contact">Contattaci</a></li>
-                <li><a href="pdf/albo_oro.pdf" target="_blank">Albo d'Oro</a></li>
-            </ul>
-        </nav>
     </header>
-    <h1>Croko Animation Company</h1>
-    <p class="motto">Divertiamoci come coccodrilli, ma con stile!</p>
-    <section id="about" class="section">
-        <h4>Croko TEAM</h4>
-        <p>Benvenuti in Croko Animation Company! Questo è il team della vostra compagnia crocodillosa preferita!</p>
-        <button onclick="toggleTeamSection()"> Scopri il Nostro Team </button>
-    </section>
-    
-    <section id="team" class="section">
-        <h4>Ci presentiamo</h4>
-        <div id="team-grid">
-            <div class="team-member">
-                <img src="images/giovanni_cinel.jpg" alt="Giovanni Cinel">
-                <h3>Giovanni Cinel</h3>
-                <p>Founder, CEO, Event Director & Talent Acquisition Manager</p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/giovannicinel" target="_blank">LinkedIn</a>
-                    <a href="cv/giovanni_cinel_cv.pdf" target="_blank">CV</a>
-                </div>
-            </div>
-            <div class="team-member">
-                <img src="images/matteo_manuzzato.jpg" alt="Matteo Manuzzato">
-                <h3>Matteo Manuzzato</h3>
-                <p>Event Co-Director</p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/matteo-manuzzato-456ab328b/" target="_blank">LinkedIn</a>
-                    <a href="cv/matteo_manuzzato_cv.pdf" target="_blank">CV</a>
-                </div>
-            </div>
-            <div class="team-member">
-                <img src="images/eddy_frighetto.jpg" alt="Eddy Frighetto">
-                <h3>Eddy Frighetto</h3>
-                <p>Software Engineer</p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/eddy-frighetto" target="_blank">LinkedIn</a>
-                    <a href="cv/eddy_frighetto_cv.pdf" target="_blank">CV</a>
-                </div>
-            </div>
-            <div class="team-member">
-                <img src="images/selene_zanotto.jpg" alt="Selene Zanotto">
-                <h3>Selene Zanotto</h3>
-                <p>Business Administrator</p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/" target="_blank">LinkedIn</a>
-                    <a href="cv/selene_zanotto_cv.pdf" target="_blank">CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="services" class="section">
-        <h4>I Nostri Servizi</h4>
-        <div id="service-grid">
-            <div class="service-member"> 
-                <div class="service">
-                    <h2>🥳 Feste di Compleanno 🎉</h2>
-                    <p>Rendi il tuo giorno speciale magico con una festa degna di un vero coccodrillo!</p>
-                </div>
-            </div>
-            <div class="service-member"> 
-                <div class="service">
-                    <h2>🎓 Feste di Laurea 🍾</h2>
-                    <p>Onora i tuoi successi con una celebrazione che non dimenticherai mai, ma che soprattutto il tuo fegato non dimenticherà presto!</p>
-                </div>
-            </div>
-            <div class="service-member"> 
-                <div class="service">
-                    <h2>🎇 Eventi Festivi 🎆</h2>
-                    <p>Dalla Befana al Capodanno, portiamo la gioia delle feste in ogni occasione!</p>
-                </div>
-            </div>
-            <div class="service-member"> 
-                <div class="service">
-                    <h2>🐊 Feste a Tema KROKO 🐊</h2>
-                    <p>Vuoi vivere una serata da vero coccodrillo? E allora cosa aspetti a contattarci!!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section">
-        <h4>Contattaci</h4>
-        <p>Compila il modulo sottostante per inviarci una segnalazione, richiedere qualsiasi informazione o proporre un nuovo evento. Il nostro team provvederà a risponderti il prima possibile!</p>
-        <form id="contactForm">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="requestType">La tua richiesta riguarda:</label>
-            <select id="requestType" name="requestType" required>
-                <option value="empty">--</option>
-                <option value="informazioni">Richiesta informazioni</option>
-                <option value="nuovo">Segnalazione Riguardante un Evento Passato</option>
-                <option value="proposta">Nuovo Evento da Proporre</option>
-            </select>
-    
-            <div id="eventDetails" style="display: none;">
-                <label for="eventName">Nome Evento:</label>
-                <input type="text" id="eventName" name="eventName">
-                
-                <label for="eventDescription">Descrizione Evento:</label>
-                <textarea id="eventDescription" name="eventDescription" rows="5"></textarea>
-            </div>
-    
-            <div id="requestDetails" style="display: none;">
-                <label for="eventRequest">Nome Evento:</label>
-                <input type="text" id="eventRequest" name="eventRequest">
-                
-                <label for="message">Descrizione della Segnalazione/Richiesta:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-    
-            <button type="submit">Invia Messaggio</button>
-        </form>
-    </section>
 
-    <footer style="text-align: center;">
-        <p>© 2024 Croko Animation Company - Tutti i diritti riservati</p>
+    <main>
+        <!-- HERO SECTION -->
+        <div class="container text-center mt-5">
+            <h1 class="display-4">Croko Animation Company</h1>
+            <p class="lead">Divertiamoci come coccodrilli, ma con stile!</p>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="mb-4">Croko TEAM</h2>
+                <p>Benvenuti in Croko Animation Company! Questo è il team della vostra compagnia crocodillosa preferita!</p>
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#team">Scopri il Nostro Team</button>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section id="team" class="collapse py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Ci Presentiamo</h2>
+                <div class="row g-4">
+                    <!-- Team Member -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="images/giovanni_cinel.jpg" alt="Giovanni Cinel" class="card-img-top" style="object-fit: cover; height: 200px;">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Giovanni Cinel</h5>
+                                <p class="card-text">Founder, CEO, Event Director & Talent Acquisition Manager</p>
+                                <a href="https://www.linkedin.com/in/giovannicinel" class="btn btn-light mb-2" target="_blank">LinkedIn</a>
+                                <a href="cv/giovanni_cinel_cv.pdf" class="btn btn-light" target="_blank">CV</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="images/matteo_manuzzato.jpg" alt="Matteo Manuzzato" class="card-img-top" style="object-fit: cover; height: 200px;">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Matteo Manuzzato</h5>
+                                <p class="card-text">Event Co-Director</p>
+                                <a href="https://www.linkedin.com/in/matteo-manuzzato-456ab328b/" class="btn btn-light mb-2" target="_blank">LinkedIn</a>
+                                <a href="cv/matteo_manuzzato_cv.pdf" class="btn btn-light" target="_blank">CV</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="images/eddy_frighetto.jpg" alt="Eddy Frighetto" class="card-img-top" style="object-fit: cover; height: 200px;">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Eddy Frighetto</h5>
+                                <p class="card-text">Software Engineer</p>
+                                <a href="https://www.linkedin.com/in/eddy-frighetto/" class="btn btn-light mb-2" target="_blank">LinkedIn</a>
+                                <a href="cv/eddy_frighetto_cv.pdf" class="btn btn-light" target="_blank">CV</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="images/selene_zanotto.jpg" alt="Selene Zanotto" class="card-img-top" style="object-fit: cover; height: 200px;">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Selene Zanotto</h5>
+                                <p class="card-text">Business Administrator</p>
+                                <a href="https://www.linkedin.com/in/" class="btn btn-light mb-2 disabled" target="_blank">LinkedIn</a>
+                                <a href="cv/selene_zanotto_cv.pdf" class="btn btn-light disabled" target="_blank">CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">I Nostri Servizi</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">🥳 Feste di Compleanno 🎉</h5>
+                                <p class="card-text">Rendi il tuo giorno speciale magico con una festa degna di un vero coccodrillo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">🎓 Feste di Laurea 🍾</h5>
+                                <p class="card-text">Onora i tuoi successi con una celebrazione che non dimenticherai mai, ma che soprattutto il tuo fegato non dimenticherà presto!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">🎇 Eventi Festivi 🎆</h5>
+                                <p class="card-text">Dalla Befana al Capodanno, portiamo la gioia delle feste in ogni occasione!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">🐊 Feste a Tema KROKO 🐊</h5>
+                                <p class="card-text">Vuoi vivere una serata da vero coccodrillo? E allora cosa aspetti a contattarci!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Contattaci</h2>
+                <p class="text-center">Compila il modulo sottostante per inviarci una segnalazione o proporre un nuovo evento.</p>
+                <form id="contactForm" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="requestType" class="form-label">La tua richiesta riguarda</label>
+                        <select id="requestType" name="requestType" class="form-select" required>
+                            <option value="empty">--</option>
+                            <option value="informazioni">Richiesta informazioni</option>
+                            <option value="segnalazione">Segnalazione Riguardante un Evento Passato</option>
+                            <option value="proposta">Nuovo Evento da Proporre</option>
+                        </select>
+                    </div>
+                    <div id="eventDetails" class="col-12 d-none">
+                        <label for="eventName" class="form-label">Nome Evento</label>
+                        <input type="text" id="eventName" name="eventName" class="form-control">
+                        <label for="eventDescription" class="form-label">Descrizione Evento</label>
+                        <textarea id="eventDescription" name="eventDescription" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div id="requestDetails" class="col-12 d-none">
+                        <label for="eventRequest" class="form-label">Nome Evento</label>
+                        <input type="text" id="eventRequest" name="eventRequest" class="form-control">
+                        <label for="message" class="form-label">Descrizione</label>
+                        <textarea id="message" name="message" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-light py-3 text-center border-top">
+        <p class="mb-0">© 2024 Croko Animation Company - Tutti i diritti riservati</p>
     </footer>
-    
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
